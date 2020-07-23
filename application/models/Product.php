@@ -1,5 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/*
+* Filename: Product
+* Filepath: models/Product.php
+* Author: Saddam
+*/
 class Product extends CI_Model{
     
     function __construct() {
@@ -15,7 +19,7 @@ class Product extends CI_Model{
         $this->db->select('*');
         $this->db->from($this->proTable);
         $this->db->where('status', '1');
-        if($id){
+        if($id){ // If id exists, will get the data by ID.
             $this->db->where('id', $id);
             $query  = $this->db->get();
             $result = $query->row_array();

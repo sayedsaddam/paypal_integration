@@ -1,5 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/* 
+* Filename; Paypal.php
+* Filepath: Controllers/Paypal.php
+* Author: Saddam
+*/
 class Paypal extends CI_Controller{
     
      function  __construct(){
