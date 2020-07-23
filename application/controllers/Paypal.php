@@ -30,7 +30,7 @@ class Paypal extends CI_Controller{
     }
      
      function cancel(){
-        $data['title'] = 'Cancelled';
+        $data['title'] = 'Canceled';
         // Load payment failed view
         $this->load->view('paypal/cancel', $data);
      }
