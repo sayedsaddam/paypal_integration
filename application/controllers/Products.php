@@ -15,6 +15,7 @@ class Products extends CI_Controller{
         
         // Get products data from the database
         $data['products'] = $this->product->getRows();
+        $data['title'] = 'Products | Paypal Integration';
         
         // Pass products data to the view
         $this->load->view('products/index', $data);

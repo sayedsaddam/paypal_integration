@@ -1,3 +1,4 @@
+<?php $this->load->view('components/head'); ?>
 <div class="col-lg-12">
     <h4 class="success">Thank you! Your payment was successful.</h4>
     <p>Item Name : <span><?php echo $item_name; ?></span></p>
@@ -8,3 +9,4 @@
     
     <a href="<?php echo base_url('products'); ?>">Back to Products</a>
 </div>
+<?php $this->load->view('components/foot'); ?>

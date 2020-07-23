@@ -24,14 +24,15 @@ class Paypal extends CI_Controller{
         $data['payment_amt']    = $paypalInfo["amt"];
         $data['currency_code']  = $paypalInfo["cc"];
         $data['status']         = $paypalInfo["st"];
-        
+        $data['title'] = 'Success';
         // Pass the transaction data to view
         $this->load->view('paypal/success', $data);
     }
      
      function cancel(){
+        $data['title'] = 'Cancelled';
         // Load payment failed view
-        $this->load->view('paypal/cancel');
+        $this->load->view('paypal/cancel', $data);
      }
      
      function ipn(){
