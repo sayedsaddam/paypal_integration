@@ -1,3 +1,4 @@
+<!-- subscription -->
 <section class="ftco-section-parallax">
     <div class="parallax-img d-flex align-items-center">
         <div class="container">
@@ -20,7 +21,7 @@
         </div>
     </div>
 </section>
-
+<!-- footer -->
 <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -64,9 +65,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">198 West 21th Street, Suite 721 UAE 10016</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+ 71235 2355 98</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@khaldiyatowers.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -82,6 +83,7 @@
     
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <!-- external JS files -->
   <script src="<?= base_url('assets/'); ?>js/jquery.min.js"></script>
   <script src="<?= base_url('assets/'); ?>js/jquery-migrate-3.0.1.min.js"></script>
   <script src="<?= base_url('assets/'); ?>js/popper.min.js"></script>
