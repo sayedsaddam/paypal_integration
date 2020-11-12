@@ -6,6 +6,7 @@ class Home extends CI_Controller{
     function __construct()
     {
         parent::__construct();
+        $this->load->model('home_model'); // Load the home_model class to access all the queries written in it.
     }
     // Index function. Whenever the Home class is called, this method will automatically be loaded.
     public function index(){
@@ -51,10 +52,39 @@ class Home extends CI_Controller{
     }
     // Sign in
     public function signin(){
-        echo "Sign In";
+        $username = $this->input->post('username');
+        $password = sha1($this->input->post('password'));
+        $login = $this->home_model->signin($username, $password);
+        if($login > '0'){
+            $id = $login->id;
+            $username = $login->username;
+            $name = $login->name;
+            $this->session->set_userdata(array('id' => $id, 'username' => $username, 'name' => $name));
+            redirect('home');
+        }else{
+            echo "<strong>Oops! </strong>You don't belong here. Try entering valid username and password to come here.";
+        }
     }
     // Sign up
     public function signup(){
-        echo "Sign up";
+        $data = array(
+            'name' => $this->input->post('name'),
+            'username' => $this->input->post('username'),
+            'email' => $this->input->post('email'),
+            'password' => sha1($this->input->post('password'))
+        );
+        if($this->home_model->sign_up($data)){
+            $this->session->set_flashdata('success', '<strong>Success! </strong>Signup successful. Ues your credential to login');
+            redirect('home');
+        }else{
+            $this->session->set_flashdata('failed', '<strong>Failed! </strong>Something went wrong, but do not fret, just give it another shot.');
+            redirect('home');
+        }
+    }
+    // Signout.
+    public function signout(){
+        // $this->session->unset_userdata('username'); // We can use both functions to destroy session and log the user out.
+        $this->session->sess_destroy();
+        redirect('home');
     }
 }

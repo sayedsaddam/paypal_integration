@@ -13,7 +13,6 @@
         </div>
         </div>
       </div>
-
       <div class="slider-item" style="background-image:url('<?= base_url('assets/images/bg_2.jpg'); ?>');">
       	<div class="overlay"></div>
         <div class="container">
@@ -28,7 +27,8 @@
         </div>
         </div>
       </div>
-    </section>
+	</section>
+
     <section class="ftco-search">
     	<div class="container">
 	    	<div class="row">
@@ -227,7 +227,6 @@
 	    	</div>
 	    </div>
     </section>
-
     <section class="ftco-section bg-light">
       <div class="container">
         <div class="row d-flex">
