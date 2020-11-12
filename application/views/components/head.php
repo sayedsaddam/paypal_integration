@@ -72,9 +72,11 @@
 						<a href="<?= base_url('home/signout'); ?>" class="nav-link ml-lg-2"><span class="icon-user"></span> Sign Out</a>
 					<?php endif; ?>
 				</li>
-				<li class="nav-item cta cta-colored">
-					<a data-toggle="modal" data-target="#signUp" href="<?= base_url('signup'); ?>" class="nav-link"><span class="icon-pencil"></span> Sign Up</a>
-				</li>
+				<?php if(!$this->session->userdata('username')): ?>
+					<li class="nav-item cta cta-colored">
+						<a data-toggle="modal" data-target="#signUp" href="<?= base_url('signup'); ?>" class="nav-link"><span class="icon-pencil"></span> Sign Up</a>
+					</li>
+				<?php endif; ?>
 	        </ul>
 	      </div>
 	    </div>
