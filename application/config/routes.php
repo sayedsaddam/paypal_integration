@@ -60,3 +60,8 @@ $route['signin'] = 'home/signin';
 $route['signup'] = 'home/signup';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// API routes.
+$route['api/authentication/login'] = 'api/authentication/login';
+$route['api/authentication/registration'] = 'api/authentication/registration';
+$route['api/authentication/user/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/authentication/user/id/$1/format/$3$4';
